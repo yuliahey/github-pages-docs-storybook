@@ -15,6 +15,9 @@
 # storybook
 /storybook-static/
 
+# docusaurus
+.docusaurus/
+
 # production
 /build
 
