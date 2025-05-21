@@ -19,9 +19,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@theme/*": ["./node_modules/@docusaurus/theme-classic/lib/theme/*"],
+      "@docusaurus/*": ["./node_modules/@docusaurus/*"]
+    },
+    "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/helloReact.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/pages/helloReact.tsx"
+  ],
   "exclude": ["node_modules"]
 }
