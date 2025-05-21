@@ -24,13 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "pnpm"
+          cache: "yarn"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Build with Docusaurus
-        run: pnpm run build
+        run: yarn run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
