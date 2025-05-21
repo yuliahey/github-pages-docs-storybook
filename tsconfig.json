@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/pages/helloReact.tsx"
+    "src/pages/helloReact.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -33,25 +33,12 @@ const config = {
 
   presets: [
     [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          //   sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/yuliahey/docusaurus-with-storybook/tree/main/",
-        },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     "https://github.com/yuliahey/docusaurus-with-storybook/tree/main/",
-        // },
+      "@docusaurus/preset-classic",
+      {
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
-      }),
+      },
     ],
   ],
 
