@@ -20,17 +20,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "yarn"
+          cache: "pnpm"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Build with Docusaurus
-        run: yarn run build
+        run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
