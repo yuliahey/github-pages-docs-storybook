@@ -9,24 +9,14 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "docusaurus": "docusaurus",
-    "docs:dev": "docusaurus start",
-    "docs:build": "docusaurus build",
-    "docs:serve": "docusaurus serve",
-    "docs:deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/preset-classic": "^3.7.0",
-    "@docusaurus/theme-classic": "^3.7.0",
-    "@docusaurus/theme-common": "^3.7.0",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
-    "@docusaurus/types": "^3.7.0",
     "@eslint/eslintrc": "^3",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-onboarding": "^8.6.14",
