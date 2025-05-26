@@ -9,7 +9,7 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/experimental-addon-test",
     "@storybook/addon-postcss",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
 
   framework: {
@@ -20,11 +20,16 @@ const config: StorybookConfig = {
   staticDirs: ["../public"],
 
   docs: {
-    autodocs: true
+    autodocs: true,
   },
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
+    reactDocgen: "react-docgen-typescript",
+  },
+
+  viteFinal: (config) => {
+    config.base = "/storybook/";
+    return config;
+  },
 };
 export default config;
