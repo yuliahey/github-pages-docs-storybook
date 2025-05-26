@@ -1,6 +1,4 @@
-import React from 'react';
-
-import './button.css';
+import React from "react";
 
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */
@@ -8,7 +6,7 @@ export interface ButtonProps {
   /** What background color to use */
   backgroundColor?: string;
   /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
   /** Button contents */
   label: string;
   /** Optional click handler */
@@ -18,24 +16,31 @@ export interface ButtonProps {
 /** Primary UI component for user interaction */
 export const Button = ({
   primary = false,
-  size = 'medium',
+  size = "medium",
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const baseClasses = "font-semibold rounded-md transition-colors duration-200";
+
+  const sizeClasses = {
+    small: "px-3 py-1.5 text-sm",
+    medium: "px-4 py-2 text-base",
+    large: "px-6 py-3 text-lg",
+  };
+
+  const modeClasses = primary
+    ? "bg-blue-600 text-white hover:bg-blue-700"
+    : "bg-gray-200 text-gray-800 hover:bg-gray-300";
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={`${baseClasses} ${sizeClasses[size]} ${modeClasses}`}
+      style={backgroundColor ? { backgroundColor } : undefined}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };
