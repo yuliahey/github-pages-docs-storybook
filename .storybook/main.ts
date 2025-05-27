@@ -26,10 +26,5 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: "react-docgen-typescript",
   },
-
-  viteFinal: (config) => {
-    config.base = "/storybook/";
-    return config;
-  },
 };
 export default config;
