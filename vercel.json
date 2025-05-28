@@ -2,7 +2,7 @@
     "redirects": [
         {
             "source": "/storybook",
-            "destination": "/storybook/"
+            "destination": "/storybook/index.html"
         }
     ],
     "rewrites": [
