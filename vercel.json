@@ -1,10 +1,6 @@
 {
     "rewrites": [
         {
-            "source": "/storybook",
-            "destination": "/storybook"
-        },
-        {
             "source": "/(.*)",
             "destination": "/"
         }
