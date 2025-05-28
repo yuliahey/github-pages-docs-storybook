@@ -1,10 +1,4 @@
 {
-    "redirects": [
-        {
-            "source": "/storybook",
-            "destination": "/storybook/"
-        }
-    ],
     "rewrites": [
         {
             "source": "/storybook",
